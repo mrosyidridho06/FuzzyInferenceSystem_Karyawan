@@ -21,7 +21,7 @@ def anggota(jamkerja,barang,gagal):
     barang_sedang = lambda x: segitig(30,60,105,x)
     barang_banyak = lambda x: naik(60,105, x)
 
-    gagal_sedikit = lambda x: turun(1,3,x)
+    gagal_sedikit = lambda x: turun(2,3,x)
     gagal_sedang = lambda x: segitig(1,3,6,x)
     gagal_banyak = lambda x: naik(3,6,x)
 
@@ -33,10 +33,10 @@ def anggota(jamkerja,barang,gagal):
     inferen(hasil_jamkerja, hasil_barang, hasil_gagal)
 
 def z_baik(x,alfa):
-    bbaik = alfa[x] * (75-45) + 45
+    bbaik = alfa[x] * (70-40) + 70
     yield bbaik
 def z_buruk(x,alfa):
-    bburuk = 75 - (alfa[x]) * (75-45)
+    bburuk = 40 - (alfa[x]) * (70-40)
     yield bburuk
 
 def inferen(hasil_jamkerja, hasil_barang, hasil_gagal):
