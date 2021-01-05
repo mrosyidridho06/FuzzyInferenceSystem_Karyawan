@@ -22,9 +22,9 @@ def komplemen(a,b,c,x):
 
 #daftar keanggotaan
 def karyawan(jamkerja,barang,gagal):
-    jamkerja_sedikit = lambda x: turun(20,40,x)
-    jamkerja_sedang = lambda x: komplemen(20,40,60, x)
-    jamkerja_banyak = lambda x: naik(40,60,x)
+    jamkerja_sedikit = lambda x: turun(35,40,x)
+    jamkerja_sedang = lambda x: komplemen(35,50,60, x)
+    jamkerja_banyak = lambda x: naik(50,60,x)
 
 # def jamkerja_sedikit(x):
 #     return turun(20,40,x)
@@ -34,11 +34,11 @@ def karyawan(jamkerja,barang,gagal):
 # def jamkerja_banyak(x):
 #     yield naik(40,60,x)
 
-    barang_sedikit =lambda x: turun(30,60,x)
-    barang_sedang = lambda x: komplemen(30,60,105,x)
-    barang_banyak = lambda x: naik(60,105, x)
+    barang_sedikit =lambda x: turun(50,60,x)
+    barang_sedang = lambda x: komplemen(50,60,100,x)
+    barang_banyak = lambda x: naik(60,100, x)
 
-    gagal_sedikit = lambda x: turun(2,3,x)
+    gagal_sedikit = lambda x: turun(1,3,x)
     gagal_sedang = lambda x: komplemen(1,3,6,x)
     gagal_banyak = lambda x: naik(3,6,x)
 
@@ -135,7 +135,7 @@ def defuzzy(alfa, z):
     defuz = sum(hasil) / sum(alfa)
     print("Hasil Defuzzifikasi = ", round(defuz, 2), "%")
     # print(alfa)
-    # print(hasil)
+    print(hasil)
 
 jamker = int(input("Jumlah Jam Kerja:"))
 jumbarang = int(input("Jumlah barang:"))
